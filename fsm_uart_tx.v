@@ -10,11 +10,11 @@ output reg [width_sel-1:0]mux_sel,
 output reg busy,
 output reg ser_en
 );
-parameter idle=3'b000;
-parameter start=3'b001;
-parameter data=3'b010;
-parameter paraty_bit=3'b011;
-parameter stop=3'b100;
+localparam idle=3'b000;
+localparam start=3'b001;
+localparam data=3'b010;
+localparam paraty_bit=3'b011;
+localparam stop=3'b100;
 reg [width_fli-1:0]cs,ns;
 //state logic
 always@(posedge clk,negedge rst_n)
